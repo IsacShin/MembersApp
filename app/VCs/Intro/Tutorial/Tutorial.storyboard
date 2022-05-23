@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TutorialVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="TutorialVC" id="Y6W-OH-hqX" customClass="TutorialVC" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAh-Oi-QIS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqg-5Z-sCd">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <segue destination="r2h-qK-khN" kind="embed" id="5qE-5L-RN3"/>
+                                        </connections>
+                                    </containerView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vaG-ht-5LT">
+                                        <rect key="frame" x="190" y="478" width="130" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="130" id="WAL-LI-Cu0"/>
+                                            <constraint firstAttribute="height" constant="50" id="w4k-wH-h6D"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="시작하기">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnStartPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VZ2-Za-Ykz"/>
+                                        </connections>
+                                    </button>
+                                    <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="cMc-Kh-qkL">
+                                        <rect key="frame" x="99.5" y="426" width="121" height="27"/>
+                                    </pageControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vaG-ht-5LT" secondAttribute="trailing" id="7xq-t6-hz7"/>
+                                    <constraint firstAttribute="bottom" secondItem="mqg-5Z-sCd" secondAttribute="bottom" id="DE4-7u-vPb"/>
+                                    <constraint firstAttribute="trailing" secondItem="mqg-5Z-sCd" secondAttribute="trailing" id="EkR-GQ-7jf"/>
+                                    <constraint firstAttribute="bottom" secondItem="vaG-ht-5LT" secondAttribute="bottom" constant="40" id="UOd-bS-hd3"/>
+                                    <constraint firstItem="vaG-ht-5LT" firstAttribute="top" secondItem="cMc-Kh-qkL" secondAttribute="bottom" constant="25" id="YwB-yS-YM9"/>
+                                    <constraint firstItem="mqg-5Z-sCd" firstAttribute="top" secondItem="dAh-Oi-QIS" secondAttribute="top" id="e1h-4i-7PN"/>
+                                    <constraint firstItem="mqg-5Z-sCd" firstAttribute="leading" secondItem="dAh-Oi-QIS" secondAttribute="leading" id="sc5-Te-J8j"/>
+                                    <constraint firstItem="cMc-Kh-qkL" firstAttribute="centerX" secondItem="mqg-5Z-sCd" secondAttribute="centerX" id="x4C-IT-3kC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="dAh-Oi-QIS" secondAttribute="bottom" id="5Iz-c9-mfl"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dAh-Oi-QIS" secondAttribute="trailing" id="63H-Nf-rge"/>
+                            <constraint firstItem="dAh-Oi-QIS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="8kH-t5-v4R"/>
+                            <constraint firstItem="dAh-Oi-QIS" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Mau-4i-jeT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bgView" destination="dAh-Oi-QIS" id="HzC-Eo-9v9"/>
+                        <outlet property="pageControl" destination="cMc-Kh-qkL" id="SbR-xf-Tk1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.875" y="80.281690140845072"/>
+        </scene>
+        <!--Tutorial PageVC-->
+        <scene sceneID="BAW-Hh-Hvl">
+            <objects>
+                <pageViewController storyboardIdentifier="TutorialPageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="r2h-qK-khN" customClass="TutorialPageVC" customModule="app" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECa-Vy-j7w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="81"/>
+        </scene>
+        <!--Tutorial Page1VC-->
+        <scene sceneID="0VS-Hi-nhu">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage1VC" id="O36-Eg-KFA" customClass="TutorialPage1VC" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0fW-X3-XVQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerBg" translatesAutoresizingMaskIntoConstraints="NO" id="fe7-72-3Dh">
+                                <rect key="frame" x="-6.5" y="40" width="333" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dez-A1-GeW">
+                                <rect key="frame" x="34.5" y="329" width="251.5" height="89"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="너">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSOriginalFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">너님을 위해 만들었어요.
+수강생분들을 한번에 관리하시라고..</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GGt-ai-Kvt"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dez-A1-GeW" firstAttribute="centerX" secondItem="GGt-ai-Kvt" secondAttribute="centerX" id="4iQ-Mo-t4f"/>
+                            <constraint firstItem="fe7-72-3Dh" firstAttribute="centerX" secondItem="GGt-ai-Kvt" secondAttribute="centerX" id="5B3-AI-Wul"/>
+                            <constraint firstItem="GGt-ai-Kvt" firstAttribute="bottom" secondItem="Dez-A1-GeW" secondAttribute="bottom" constant="150" id="Kra-jt-mZv"/>
+                            <constraint firstItem="Dez-A1-GeW" firstAttribute="top" secondItem="fe7-72-3Dh" secondAttribute="bottom" constant="20" id="VnP-WD-dnb"/>
+                            <constraint firstItem="fe7-72-3Dh" firstAttribute="top" secondItem="GGt-ai-Kvt" secondAttribute="top" constant="40" id="gwX-Le-tYr"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dsp-pr-zGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1805.7971014492755" y="80.357142857142847"/>
+        </scene>
+        <!--Tutorial Page4VC-->
+        <scene sceneID="gfG-Yg-CJ8">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage4VC" id="5a7-E9-SEj" customClass="TutorialPage4VC" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="3" contentMode="scaleToFill" id="VZh-KN-W1b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerBg" translatesAutoresizingMaskIntoConstraints="NO" id="xah-TN-jYG">
+                                <rect key="frame" x="-6.5" y="40" width="333" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x1e-Dh-37E">
+                                <rect key="frame" x="44" y="329" width="232" height="89"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="해">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSOriginalFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+해지기 전에 퇴근하세요. 
+마무리는 알아서할게요. 너를위해</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="AppleSDGothicNeo-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IBa-Uw-PE2"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="IBa-Uw-PE2" firstAttribute="bottom" secondItem="x1e-Dh-37E" secondAttribute="bottom" constant="150" id="3kh-nG-SAf"/>
+                            <constraint firstItem="xah-TN-jYG" firstAttribute="centerX" secondItem="IBa-Uw-PE2" secondAttribute="centerX" id="Gj8-We-vlM"/>
+                            <constraint firstItem="x1e-Dh-37E" firstAttribute="top" secondItem="xah-TN-jYG" secondAttribute="bottom" constant="20" id="Zky-ch-X91"/>
+                            <constraint firstItem="xah-TN-jYG" firstAttribute="top" secondItem="IBa-Uw-PE2" secondAttribute="top" constant="40" id="abW-82-jrU"/>
+                            <constraint firstItem="x1e-Dh-37E" firstAttribute="centerX" secondItem="IBa-Uw-PE2" secondAttribute="centerX" id="uW0-6B-AIG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BD2-4n-7L0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4145" y="81"/>
+        </scene>
+        <!--Tutorial Page2VC-->
+        <scene sceneID="gHM-Io-DEb">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage2VC" id="5at-sk-9wd" customClass="TutorialPage2VC" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="aJY-bU-SZY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerBg" translatesAutoresizingMaskIntoConstraints="NO" id="Ahb-yD-ya6">
+                                <rect key="frame" x="-6.5" y="40" width="333" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="knC-Bc-BJv">
+                                <rect key="frame" x="41.5" y="329" width="237" height="89"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="를">
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+을이아닌 모두가 갑이되어 시간에 
+구애받지 않고 한번에 빠르게</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="AppleSDGothicNeo-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fDP-nb-Zl5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="knC-Bc-BJv" firstAttribute="centerX" secondItem="fDP-nb-Zl5" secondAttribute="centerX" id="A0m-5f-NX6"/>
+                            <constraint firstItem="Ahb-yD-ya6" firstAttribute="top" secondItem="fDP-nb-Zl5" secondAttribute="top" constant="40" id="ZDY-ws-Djm"/>
+                            <constraint firstItem="fDP-nb-Zl5" firstAttribute="bottom" secondItem="knC-Bc-BJv" secondAttribute="bottom" constant="150" id="nDV-nY-iy4"/>
+                            <constraint firstItem="knC-Bc-BJv" firstAttribute="top" secondItem="Ahb-yD-ya6" secondAttribute="bottom" constant="20" id="vUe-6T-BVY"/>
+                            <constraint firstItem="Ahb-yD-ya6" firstAttribute="centerX" secondItem="fDP-nb-Zl5" secondAttribute="centerX" id="xCh-uy-UzW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLm-vb-GZZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2638" y="80"/>
+        </scene>
+        <!--Tutorial Page3VC-->
+        <scene sceneID="qbW-Gq-dpJ">
+            <objects>
+                <viewController storyboardIdentifier="TutorialPage3VC" id="9JM-Lc-FJa" customClass="TutorialPage3VC" customModule="app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="ayd-yi-S78">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerBg" translatesAutoresizingMaskIntoConstraints="NO" id="51C-dI-ZQK">
+                                <rect key="frame" x="-6.5" y="40" width="333" height="269"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV1-mI-zFL">
+                                <rect key="frame" x="21" y="329" width="278" height="89"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="위">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="20" name="AppleSDGothicNeo-Bold"/>
+                                            <font key="NSOriginalFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+위대한 당신의 라이프 사이클을 위한 앱!
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" size="18" name="AppleSDGothicNeo-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="AppleSDGothicNeo-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VcM-cj-bE2"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="51C-dI-ZQK" firstAttribute="centerX" secondItem="VcM-cj-bE2" secondAttribute="centerX" id="1vY-yX-ks8"/>
+                            <constraint firstItem="51C-dI-ZQK" firstAttribute="top" secondItem="VcM-cj-bE2" secondAttribute="top" constant="40" id="46c-zt-EKr"/>
+                            <constraint firstItem="gV1-mI-zFL" firstAttribute="centerX" secondItem="VcM-cj-bE2" secondAttribute="centerX" id="YXn-Sy-WG2"/>
+                            <constraint firstItem="gV1-mI-zFL" firstAttribute="top" secondItem="51C-dI-ZQK" secondAttribute="bottom" constant="20" id="bad-m4-jrS"/>
+                            <constraint firstItem="VcM-cj-bE2" firstAttribute="bottom" secondItem="gV1-mI-zFL" secondAttribute="bottom" constant="150" id="mej-s5-3x1"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcM-nU-3wr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3409" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="headerBg" width="333.33334350585938" height="222"/>
+    </resources>
+</document>
