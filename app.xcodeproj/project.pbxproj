@@ -187,11 +187,10 @@
 		4B411BA9265F8E1A00A677FA /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				4B88A71A283B2287009D8EDB /* Components */,
 				4B411BAA265F8E3D00A677FA /* Calendar.storyboard */,
 				4B411BB0265F93C300A677FA /* CalendarVC.swift */,
 				4BC316282664B8DB001CFD7F /* ScheduleVC.swift */,
-				4BC3162A2664DC4E001CFD7F /* CustomGrabberHandleView.xib */,
-				4BC3162C2664DC5B001CFD7F /* CustomGrabberHandleView.swift */,
 				4BA1A0FD2692F578000026F9 /* EditDateVC.swift */,
 			);
 			path = Calendar;
@@ -203,6 +202,15 @@
 				4B8300542648FB3D00326BFC /* AdsProtocol.swift */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		4B88A71A283B2287009D8EDB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4BC3162A2664DC4E001CFD7F /* CustomGrabberHandleView.xib */,
+				4BC3162C2664DC5B001CFD7F /* CustomGrabberHandleView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		4BA446EE26328CD900DBF995 /* Utils */ = {
